@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stutic/less/main.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="header-left">
+                <</div>
+                    <div class="header-tit">家居</div>
+                    <div class="header-right">
+                        搜索</div>
+            </div>
+            <div class="section">
+                <div class="nav">
+                    <script type="text/x-handlebars-template" id="nav">
+                        <ul>
+                            {{#each data}}
+                            <li>{{title}}</li>
+                            {{/each}}
+                            <!-- <li class='active'>床品件套</li>
+                        <li>被枕</li>
+                        <li>家具</li>
+                        <li>收纳</li>
+                        <li>布一软装</li> -->
+                        </ul>
+                    </script>
+                </div>
+                <div class="box">
+                    <div class="page">
+                        <script type="text/x-handlebars-template" id="page">
+                            <ul>
+                                {{#each data}}
+                                <li>
+                                    <dl>
+                                        <dt><a href="./index.html"><img src="{{this.img}}" alt=""></a><p>{{this.tit}}</p></dt>
+                                        <dd>
+                                            <span>{{this.pic}}</span>
+                                            <h3>{{this.title}}</h3>
+                                            <p>￥<em>{{this.pice}}</em></p>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </script>
+                    </div>
+                    <div class="page">
+                        <script type="text/x-handlebars-template" id="page">
+                            <ul>
+                                {{#each data}}
+                                <li>
+                                    <dl>
+                                        <dt><a href="./index.html"><img src="{{this.img}}" alt=""></a><p>{{this.tit}}</p></dt>
+                                        <dd>
+                                            <span>{{this.pic}}</span>
+                                            <h3>{{this.title}}</h3>
+                                            <p>￥<em>{{this.pice}}</em></p>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+<script src="../stutic/js/lib/require.js">
+</script>
+<script>
+    require(["../stutic/js/config"], function() {
+        require(["main"])
+    })
+</script>
+
+</html>
